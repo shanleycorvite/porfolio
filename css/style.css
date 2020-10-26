@@ -1,23 +1,61 @@
-h1{
-	display: block; 
-	font-size: 2em; 
-	margin-top: 0.67em; 
-	margin-bottom: 0.67em; 
-	margin-left: 0; 
-	margin-right: 0; 
-	font-weight: bold;
+/* navbar */
+header{
+	background: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
-nav ul li{
+.nav_links{
+	display: flex;
+	flex-direction: row;
+}
+
+.nav_links a{
+	color: blue;
+	padding: 10px;
+	width: 25%;
+}
+
+.nav_item a:hover, a:focus{
+	color: red;
+	text-decoration: underline;
+}
+
+/* nav ul li{
 	background-color: #4DFF4D;
 	padding:10px;
 	width:25%;
 	border:1px solid black;
 }
+*/
 
 body{
-	margin:1%;
-	padding:1%;
+	font-family: 'Raleway', sans-serif;
+	margin:2%;
+	padding:2%;
+	font-size: 16pt;
+}
+
+h1{
+	display: block; 
+	font-size: 2em; 
+	margin-top: 1em; 
+	margin-bottom: 1em; 
+	margin-left: 0; 
+	margin-right: 0; 
+	font-weight: bold;
+	font-size: 30pt;
+} 
+
+h2{
+	display: block; 
+	margin-top: .5em; 
+	margin-bottom: .5em; 
+	margin-left: 0; 
+	margin-right: 0; 
+	font-weight: bold;
+	font-size: 15pt;
 }
 
 p {
@@ -25,10 +63,11 @@ p {
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-inline-end: 0px;
+	font-size: 12pt;
 }
 
-header, main, nav, footer{
+header, main, nav{
 	border: 1px solid grey;
 	margin-bottom: 10px;
 }
@@ -40,4 +79,11 @@ img{
     padding: 25px;
     border-radius: 10px;
     margin: 10px;
+}
+
+footer{
+	background-color: black;
+	color: white;
+	padding: 30px;
+	text-align: center;
 }
