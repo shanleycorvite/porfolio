@@ -10,8 +10,6 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 
 main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
 
-/* Handle box-sizing while better addressing child elements:
-   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
     box-sizing: border-box;
 }
@@ -22,29 +20,16 @@ html {
     box-sizing: inherit;
 }
 
-/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
 
-/* Responsive images and other embedded objects */
-/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
 img,
 object,
 embed {max-width: 100%;}
 
-/*
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-    In fact, it *will* cause problems with Google Maps' controls at small size.
-    If this is the case for you, try uncommenting the following:
-#map img {
-        max-width: none;
-}
-*/
 
 /* force a vertical scrollbar to prevent a jumpy page */
 html {overflow-y: scroll;}
 
-/* we use a lot of ULs that aren't bulleted.
-    you'll have to restore the bullets within content,
-    which is fine because they're probably customized anyway */
+
 ul {list-style: none;}
 
 blockquote, q {quotes: none;}
@@ -60,7 +45,6 @@ del {text-decoration: line-through;}
 
 abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
 
-/* tables still need cellspacing="0" in the markup */
 table {border-collapse: separate; border-spacing: 0;}
 th {font-weight: bold; vertical-align: bottom;}
 td {font-weight: normal; vertical-align: top;}
