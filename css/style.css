@@ -1,6 +1,6 @@
 /* navbar */
 header{
-	background: white;
+	background: black;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -17,18 +17,12 @@ header{
 	width: 25%;
 }
 
-.nav_item a:hover, a:focus{
+.nav_item a:hover, .nav_links a:hover{
 	color: red;
 	text-decoration: underline;
+	-webkit-text-decoration-style: underline;
+			text-decoration-style: underline;
 }
-
-/* nav ul li{
-	background-color: #4DFF4D;
-	padding:10px;
-	width:25%;
-	border:1px solid black;
-}
-*/
 
 body{
 	font-family: 'Raleway', sans-serif;
@@ -38,33 +32,21 @@ body{
 }
 
 h1{
-	display: block; 
-	font-size: 2em; 
-	margin-top: 1em; 
-	margin-bottom: 1em; 
-	margin-left: 0; 
-	margin-right: 0; 
+	text-align: center;	
 	font-weight: bold;
 	font-size: 30pt;
 } 
 
 h2{
-	display: block; 
-	margin-top: .5em; 
-	margin-bottom: .5em; 
-	margin-left: 0; 
-	margin-right: 0; 
+	text-align: center;
 	font-weight: bold;
-	font-size: 15pt;
+	font-size: 20pt;
 }
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-	margin-inline-end: 0px;
+	text-align: center;
 	font-size: 12pt;
+	padding: 30px;
 }
 
 header, main, nav{
@@ -79,6 +61,14 @@ img{
     padding: 25px;
     border-radius: 10px;
     margin: 10px;
+}
+
+.gallery{
+	min-height: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: space-around;
 }
 
 footer{
