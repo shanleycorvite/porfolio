@@ -1,79 +1,109 @@
+html{
+	scroll-behavior: smooth;
+}
+
 /* navbar */
+/*
 header{
 	background: black;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.nav_links{
-	display: flex;
-	flex-direction: row;
-}
-
-.nav_links a{
-	color: blue;
+	display:flex;
+	flex-direction:row;
 	padding: 10px;
-	width: 25%;
+	justify-content: center;
+}
+*/
+header{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: yellow;
+  height: 100px;                /* Parallax effect */
+  background-color: red; /*Set background-image or background-color*/
+  /*grid-column: 1 / -1;  Can you explain what this does?*/
+  /*grid-row: 1 / auto;   Can you rewrite it?*/
 }
 
-.nav_item a:hover, .nav_links a:hover{
+.main_nav, .extra_nav{
+	display:flex;
+	flex-direction: row;
+	padding: 5px;
+	justify-content: center;
+	font-size: 20px;
+}
+
+.nav_item a:hover, .main_nav a:hover{
 	color: red;
 	text-decoration: underline;
 	-webkit-text-decoration-style: underline;
 			text-decoration-style: underline;
 }
 
+.main_nav a{
+	color: green;
+	padding: 10px;
+	width: 25%;
+}
+
+.extra_nav .nav_item{
+	color: blue;
+	padding: 10px;
+	width:25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* body text */
+
 body{
 	font-family: 'Raleway', sans-serif;
-	margin:2%;
-	padding:2%;
 	font-size: 16pt;
 }
 
+/* headers */
 h1{
 	text-align: center;	
 	font-weight: bold;
 	font-size: 30pt;
 } 
-
-h2{
+h2, h3{
+	padding-top: 10px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 20pt;
 }
 
-p {
+/* paragraphs */
+p{
 	text-align: center;
 	font-size: 12pt;
-	padding: 30px;
+	padding: 10px;
 }
 
-header, main, nav{
-	border: 1px solid grey;
-	margin-bottom: 10px;
+main{
+	border: 1px solid gray;
 }
 
-img{
-    height: 200px;
-    width:inherit;
-    border: 3px solid blue;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 10px;
-}
-
+/* galleries */
 .gallery{
 	min-height: 600px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	align-content: stretch;
-	justify-content: space-around;
 }
 
+img{
+	border: 10px #50C7C7 solid;
+	margin: 10px;
+	width: 300px;
+}
+
+/* footer */
 footer{
 	background-color: black;
 	color: white;
-	padding: 30px;
+	padding: 10px;
 	text-align: center;
 }
