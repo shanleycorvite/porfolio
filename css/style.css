@@ -1,27 +1,17 @@
+@media screen and (min-width: 400px) {
+
 html{
 	scroll-behavior: smooth;
 }
 
-/* navbar */
-/*
 header{
-	background: black;
-	display:flex;
-	flex-direction:row;
-	padding: 10px;
-	justify-content: center;
-}
-*/
-header{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
+  background-attachment: fixed;     
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;       
   color: yellow;
-  height: 100px;                /* Parallax effect */
-  background-color: red; /*Set background-image or background-color*/
-  /*grid-column: 1 / -1;  Can you explain what this does?*/
-  /*grid-row: 1 / auto;   Can you rewrite it?*/
+  height: 200px;                
+  background-image: url("../images/scenery.jpg");
 }
 
 .main_nav, .extra_nav{
@@ -55,7 +45,6 @@ header{
 }
 
 /* body text */
-
 body{
 	font-family: 'Raleway', sans-serif;
 	font-size: 16pt;
@@ -66,6 +55,7 @@ h1{
 	text-align: center;	
 	font-weight: bold;
 	font-size: 30pt;
+	padding-top: 40px;
 } 
 h2, h3{
 	padding-top: 10px;
@@ -106,4 +96,19 @@ footer{
 	color: white;
 	padding: 10px;
 	text-align: center;
+}
+}
+
+/* Media Queries */
+@media screen and (min-width: 750px) _{
+	body, #about, #background, #education, #ff {
+		font-size: 20px;
+		background: white;
+	}
+	nav {
+		padding: 20px;
+	}
+	nav a{
+		color: green;
+	}
 }
