@@ -85,7 +85,7 @@ main{
 }
 
 img{
-	border: 10px #50C7C7 solid;
+	border: 10px blue solid;
 	margin: 10px;
 	width: 300px;
 }
