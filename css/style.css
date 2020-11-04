@@ -24,9 +24,8 @@ header{
 
 .nav_item a:hover, .main_nav a:hover{
 	color: red;
+	font-weight: bold;
 	text-decoration: underline;
-	-webkit-text-decoration-style: underline;
-			text-decoration-style: underline;
 }
 
 .main_nav a{
@@ -110,7 +109,7 @@ footer{
     padding-bottom: 5px;
   }
   .container img{
-    margin: 0 auto;
+    margin: 2 auto;
   }
   .container{
     grid-row: 1;
@@ -147,7 +146,7 @@ footer{
   }
 
 /* Media Queries */
-@media screen and (min-width: 750px) _{
+@media screen and (min-width: 750px) {
 	body, #about, #background, #education, #ff {
 		font-size: 20px;
 		background: white;
@@ -161,9 +160,9 @@ footer{
 }
 
 /* Reduced Motion */
-@media screen and (prefers-reduced-motion: reduce){
+@media screen and (prefers-reduced-motion: reduce) {
 	/* Remove bold from nav bar */
-	nav a:hover{
+	.main_nav a:hover{
 	  font-weight: unset;
 	}
 	/* Display "Skip to Main Content" */
@@ -172,6 +171,6 @@ footer{
 	  transition: none;
 	}
 	/* Remove bold from links */
-	a:hover{
+	.nav_item a:hover{
 	  font-weight: unset;
 	}
