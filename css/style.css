@@ -4,92 +4,131 @@ html{
 	scroll-behavior: smooth;
 }
 
+/*header*/
 header{
-  background-attachment: fixed;     
-  background-position: center;  
-  background-repeat: no-repeat; 
-  background-size: cover;       
-  color: yellow;
-  height: 200px;                
-  background-image: url("../images/scenery.jpg");
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-attachment: fixed;     
+	background-position: center;  
+	background-repeat: no-repeat; 
+	background-size: cover;       
+	color: white;
+	height: 130px;                
+	background-image: url("../images/scenery.jpg");
 }
 
-.main_nav, .extra_nav{
+nav{
+	text-align: center;
+	width: 100%;
 	display:flex;
 	flex-direction: row;
-	padding: 5px;
 	justify-content: center;
-	font-size: 20px;
+	font-size: 15px;
 }
 
-.nav_item a:hover, .main_nav a:hover{
-	color: red;
-	font-weight: bold;
-	text-decoration: underline;
-}
-
-.main_nav a{
-	color: green;
-	padding: 10px;
-	width: 25%;
-}
-
-.extra_nav .nav_item{
+nav a{
 	color: blue;
-	padding: 10px;
-	width:25%;
+	padding: 5px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
+nav a:hover{
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 /* body text */
 body{
 	font-family: 'Raleway', sans-serif;
-	font-size: 16pt;
+	color: black;
 }
 
 /* headers */
-h1{
+h1, h2{
 	text-align: center;	
 	font-weight: bold;
-	font-size: 30pt;
-	padding-top: 40px;
-} 
-h2, h3{
-	padding-top: 10px;
-	text-align: center;
-	font-weight: bold;
 	font-size: 20pt;
+	padding-top: 40px;
 }
 
 /* paragraphs */
 p{
 	text-align: center;
-	font-size: 12pt;
+	font-size: 10pt;
 	padding: 10px;
 }
 
-main{
-	border: 1px solid gray;
+/*text links*/
+a{
+	color: blue;
+}
+
+a:hover{
+	font-weight: bold;
+	color: red;
+	text-decoration: underline;
 }
 
 /* galleries */
 .gallery{
-	min-height: 600px;
+	min-height: 700px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-content: stretch;
+	justify-content: space-around;
+	align-content: center;
 }
 
-img{
-	border: 10px blue solid;
-	/* margin: 10px;
-	width: 300px; */
+.gallery img{
+	border: 10px turquoise solid;
+	margin: 15px;
+	width: 300px; 
 	max-height:700px;
-	overflow:hidden;
 }
+
+/* contact */
+form{
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  form label{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  input{
+    background:#black;
+    width: 200px;
+    border: line;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  fieldset div{
+   border: 2px solid white;
+   margin: 2%;
+   padding: 1%;
+   border-radius: 5px;
+  }
+  input[type=submit]{
+    border: 2px solid black;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  input:focus{
+    background: #C0C0C0;
+  }
 
 /* footer */
 footer{
@@ -100,71 +139,43 @@ footer{
 }
 }
 
- /* Grid */
- .container{
-    display: grid;
-    grid-row-gap: 5px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto auto auto auto auto auto auto auto auto;
-    justify-content: center;
-    align-content: center;
-    padding-bottom: 5px;
-  }
-  .container img{
-    margin: 2 auto;
-  }
-  .container{
-    grid-row: 1;
-  }
-  .container img:nth-child(3){
-    grid-row: 2;
-  }
-  .container img:nth-child(4){
-    grid-row: 3;
-  }
-  .container img:nth-child(5){
-    grid-row: 4;
-  }
-  .container img:nth-child(9){
-    grid-row: 5;
-  }
-  .container{
-    grid-row: 6;
-  }
-  .container img:nth-child(8){
-    grid-row: 7;
-  }
-  .container img:nth-child(7){
-    grid-row: 8;
-  }
-  .container img:nth-child(10){
-    grid-row: 9;
-  }
-  .container img:nth-child(11){
-    grid-row: 10;
-  }
-  .container img:nth-child(6){
-    grid-row: 11;
-  }
+ /* grid */
 
-/* Media Queries */
+
+/* media queries */
 @media screen and (min-width: 750px) {
-	body, #about, #background, #education, #ff {
+	body, #about, #academics, #ff, #contact {
 		font-size: 20px;
 		background: white;
 	}
-	nav {
-		padding: 20px;
+	nav{
+		text-align: center;
+		width: 100%;
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		font-size: 15px;
 	}
+	
 	nav a{
-		color: green;
+		color: blue;
+		padding: 5px;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
 	}
-}
+	
+	nav a:hover{
+		color: red;
+		font-weight: bold;
+		text-decoration: underline;
+	{}
 
-/* Reduced Motion */
+/* reduced Mmtion */
 @media screen and (prefers-reduced-motion: reduce) {
 	/* Remove bold from nav bar */
-	.main_nav a:hover{
+	.nav a:hover{
 	  font-weight: unset;
 	}
 	/* Display "Skip to Main Content" */
@@ -173,6 +184,6 @@ footer{
 	  transition: none;
 	}
 	/* Remove bold from links */
-	.nav_item a:hover{
+	.nav_links a:hover{
 	  font-weight: unset;
 	}
