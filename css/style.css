@@ -189,6 +189,47 @@ footer{
     text-decoration-style: solid;
   }
 
+/* flip cards */
+  /* https://www.w3schools.com/howto/howto_css_flip_card.asp */
+  .ltsm-flip, .i3-flip {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+	margin: 0 auto;
+  }
+
+  .ltsm-flip-inner, .i3-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  }
+  .ltsm-flip:hover .ltsm-flip-inner, .ltsm-flip-inner:focus, .i3-flip:hover .i3-flip-inner, .i3-flip-inner:focus {
+    transform: rotateY(180deg);
+  }
+  
+  .ltsm-flip-front, .ltsm-flip-back, .i3-flip-front, .i3-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .ltsm-flip-front, .i3-flip-front {
+	background-color:gray;
+	color:black;
+  }
+
+  .ltsm-flip-back, .i3-flip-back {
+    background-color: #f0f0f0;
+    color: #2E2E2E;
+	transform: rotateY(180deg);
+  }
+
 /* media queries */
 @media screen and (min-width: 750px) {
 	body, #about, #academics, #ff, #contact {
@@ -232,17 +273,24 @@ footer{
 	.nav a:hover{
 	  font-weight: unset;
 	}
+
 	/* display "Skip to Main Content" */
 	.skip a{
 	  -webkit-transition: none;
 	  transition: none;
 	}
+
 	/* remove bold from links */
 	.nav_links a:hover{
 	  font-weight: unset;
 	}
 
-	/*remove opacity effect for images*/
+	/* remoce flip effect */
+	.ltsm-flip:hover .ltsm-flip-inner .i3-flip:hover .i3-flip-inner{
+		transform:none;
+	}
+
+	/* remove opacity effect for images */
 	.gallery img{
 		opacity: 1;
 		transition: none;
