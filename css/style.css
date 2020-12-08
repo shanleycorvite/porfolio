@@ -106,11 +106,15 @@ a:hover{
 }
 
 img, .gallery img{
+	display: block;
 	border: 10px #FFC300 solid;
 	margin: 15px;
 	width: 300px; 
-	max-height:700px;
-	/*opacity effect*/
+	max-height: 700px;
+}
+
+/*opacity effect */
+.gallery img{
 	opacity: 1;
 	transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
